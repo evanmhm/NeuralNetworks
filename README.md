@@ -1,4 +1,4 @@
-# Perceptron-Network
+# Neural-Networks
 ## About
 This is just a repository to host some of the tests that I am doing with neural
 networks. I hope to incorporate pattern guessing, handwriting recognition, and
