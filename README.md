@@ -10,5 +10,5 @@ $ pip install numpy
 ```
 Then run the program:
 ```bash
-$ python network.py
+$ python run.py
 ```
