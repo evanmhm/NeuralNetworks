@@ -1,4 +1,5 @@
 # Neural-Networks
+[![Python 2.7][python-img]][python-url]
 ## About
 This is just a repository to host some of the tests that I am doing with neural
 networks. I hope to incorporate pattern guessing, handwriting recognition, and
@@ -17,3 +18,6 @@ Currently there are two options  `-v` and `-i` for verbose and amount of iterati
 respectively. Verbose prints more useful values and the iterations values is used
 to specify how many iterations of training the network will go through. If you
 forget `-h` will give descriptions of the options.
+
+[python-img]:   https://img.shields.io/badge/python-2.7-blue.svg?style=flat-square
+[python-url]:   https://www.python.org/downloads
