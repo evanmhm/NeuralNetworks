@@ -12,3 +12,8 @@ Then run the program:
 ```bash
 $ python run.py
 ```
+## Options
+Currently there are two options  `-v` and `-i` for verbose and amount of iterations,
+respectively. Verbose prints more useful values and the iterations values is used
+to specify how many iterations of training the network will go through. If you
+forget `-h` will give descriptions of the options.
