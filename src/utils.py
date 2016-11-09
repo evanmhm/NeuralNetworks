@@ -14,5 +14,6 @@ def get_args():
 	parser = configargparse.ArgParser(default_config_files=default_config, auto_env_var_prefix='NEURAL')
 
 	parser.add_argument("-v", "--verbose", action="store_true", help="for debugging, prints useful values")
+	parser.add_argument("-i", "--iterations", type=int, help="how many training iterations the network goes through")
 
 	return vars(parser.parse_args())

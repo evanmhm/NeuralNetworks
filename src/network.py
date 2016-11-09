@@ -3,7 +3,17 @@
 import numpy as np
 from . import args
 
-def startNetwork():
+
+def startNetwork(self):
+    verbose = self.args["verbose"]
+    iterations = self.args["iterations"]
+    # defalt value of iterations
+    if (not iterations):
+        iterations = 10000
+
+    if (verbose):
+        print ("Iterations : %d" % iterations)
+
     # sigmoid function
     def nonlinear(x, derive=False):
         if (derive):
@@ -24,8 +34,11 @@ def startNetwork():
 
     syn0 = 2 * np.random.random((3, 1)) - 1
 
+    if (verbose):
+        print ("Random weight start values: %s \n" % syn0)
+
     # learn pattern of data set and build a synapse
-    for iter in xrange(10000):
+    for iter in xrange(iterations):
         l0 = X
         l1 = nonlinear(np.dot(l0, syn0))
 
@@ -35,17 +48,17 @@ def startNetwork():
 
         syn0 += np.dot(l0.T, l1_delta)
 
-
     i = 0
     while (i < len(l1)):
         l1[i] = round(l1[i])
         print ("input: %s, output: %d, guess: %d" % (X[i], y[i], l1[i]))
         i += 1
 
-    print "weights on inputs: %s \n" % nonlinear(syn0)
+    if (verbose):
+        print ("Weights after training: %s \n" % nonlinear(syn0))
 
-    while(True):
-        user_input = raw_input('Enter 3 numbers seperated by spaces: ').split(' ')
+    while (True):
+        user_input = raw_input('Enter 3 numbers seperated by spaces to test training: ').split(' ')
         input_arr = [int(num) for num in user_input]
 
         guess = round(nonlinear(np.dot(input_arr, syn0)))
